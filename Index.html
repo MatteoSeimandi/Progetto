@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Project</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/stile.css">
+      <script src="js/controllo.js"></script>
+      <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+      <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+   </head>
+   <body background="img/sfondo3.jpg" vlink="#115703" linl="#e2881e">
+      <div id="main">
+         <h1 id="mainTitle">CREATES YOUR PERSONAL DOCUMENT</h1>
+         <div id="menu">
+            <h2>MENU</h2>
+            <a class="anchor" href="#mainForm" name="come_back">mainForm</a>
+            <a class="anchor" href="#image_selector">Image Selector</a>
+            <a class="anchor" href="#geo">Geolocation</a>
+            <a class="anchor" href="#final">Final Step</a>
+         </div>
+         <div id="descrizione">
+            <p id="welcome">
+               Welcome to my webpage! Here, You can create your identity card with your main data, profile image and your location (if it's possible).
+               Don't worry for your data, them will save in your browser archive. Warning! You can create your document only when you did all steps.
+               You can Click the "i" button for more information and you can browse to the page with the internals link.
+            </p>
+         </div>
+         <hr>
+         <div id="mainForm">
+            <h2>MAIN FORM</h2>
+            <input type="button" class="info" value="i" onclick="appari()"> <br>
+            <p class="ps" name="f" hidden>This is the main form. You can write here your credentials and you bio. the forms with the * assignement are obligatory.</p>
+            <form>
+               <input type="text" placeholder="*Your name" id="your_name">
+               <input type="text" placeholder="*Your surname" id="your_surname">
+               <textarea id="area" placeholder="Your bio"></textarea>
+               <br>
+               *Gender:
+               <input type="radio" name="sesso" id="MALE"> Male
+               <input type="radio" name="sesso" id="FEMALE"> Female
+               <br>
+               *Country:
+               <input type="radio" name="paese" onclick="naz()" id="IT"> IT
+               <input type="radio" name="paese" onclick="naz()" id="OTHER"> OTHER
+               <input type="text" id="other" hidden placeholder="*specify">
+               <br>
+               *Day:
+               <select id="day">
+                  <option class="days">1</option>
+                  <option class="days">2</option>
+                  <option class="days">3</option>
+                  <option class="days">4</option>
+                  <option class="days">5</option>
+                  <option class="days">6</option>
+                  <option class="days">7</option>
+                  <option class="days">8</option>
+                  <option class="days">9</option>
+                  <option class="days">10</option>
+                  <option class="days">11</option>
+                  <option class="days">12</option>
+                  <option class="days">13</option>
+                  <option class="days">14</option>
+                  <option class="days">15</option>
+                  <option class="days">16</option>
+                  <option class="days">17</option>
+                  <option class="days">18</option>
+                  <option class="days">19</option>
+                  <option class="days">20</option>
+                  <option class="days">21</option>
+                  <option class="days">22</option>
+                  <option class="days">23</option>
+                  <option class="days">24</option>
+                  <option class="days">25</option>
+                  <option class="days">26</option>
+                  <option class="days">27</option>
+                  <option class="days">28</option>
+                  <option class="days">29</option>
+                  <option class="days">30</option>
+                  <option class="days">31</option>
+               </select>
+               *Month:
+               <select id="month">
+                  <option class="months">January</option>
+                  <option class="months">February</option>
+                  <option class="months">March</option>
+                  <option class="months">April</option>
+                  <option class="months">May</option>
+                  <option class="months">June</option>
+                  <option class="months">July</option>
+                  <option class="months">August</option>
+                  <option class="months">September</option>
+                  <option class="months">October</option>
+                  <option class="months">November</option>
+                  <option class="months">Dicember
+                  </option>
+               </select>
+               *Year:
+               <select id="year">
+                  <option class="years">1960</option>
+                  <option class="years">1961</option>
+                  <option class="years">1962</option>
+                  <option class="years">1963</option>
+                  <option class="years">1964</option>
+                  <option class="years">1965</option>
+                  <option class="years">1966</option>
+                  <option class="years">1967</option>
+                  <option class="years">1968</option>
+                  <option class="years">1969</option>
+                  <option class="years">1970</option>
+                  <option class="years">1971</option>
+                  <option class="years">1972</option>
+                  <option class="years">1973</option>
+                  <option class="years">1974</option>
+                  <option class="years">1975</option>
+                  <option class="years">1976</option>
+                  <option class="years">1977</option>
+                  <option class="years">1978</option>
+                  <option class="years">1979</option>
+                  <option class="years">1980</option>
+                  <option class="years">1981</option>
+                  <option class="years">1982</option>
+                  <option class="years">1983</option>
+                  <option class="years">1984</option>
+                  <option class="years">1985</option>
+                  <option class="years">1986</option>
+                  <option class="years">1987</option>
+                  <option class="years">1988</option>
+                  <option class="years">1989</option>
+                  <option class="years">1990</option>
+                  <option class="years">1991</option>
+                  <option class="years">1992</option>
+                  <option class="years">1993</option>
+                  <option class="years">1994</option>
+                  <option class="years">1995</option>
+                  <option class="years">1996</option>
+                  <option class="years">1997</option>
+                  <option class="years">1998</option>
+                  <option class="years">1999</option>
+                  <option class="years">2000</option>
+                  <option class="years">2001</option>
+                  <option class="years">2002</option>
+                  <option class="years">2003</option>
+                  <option class="years">2004</option>
+                  <option class="years">2005</option>
+                  <option class="years">2006</option>
+                  <option class="years">2007</option>
+                  <option class="years">2008</option>
+                  <option class="years">2009</option>
+                  <option class="years">2010</option>
+                  <option class="years">2011</option>
+                  <option class="years">2012</option>
+                  <option class="years">2013</option>
+                  <option class="years">2014</option>
+                  <option class="years">2015</option>
+                  <option class="years">2016</option>
+                  <option class="years">2017</option>
+                  <option class="years">2018</option>
+                  <option class="years">2019</option>
+                  <option class="years">2020</option>
+               </select>
+               <input type="button" value="send" class="bottoni" onclick="controllo1()">
+               <input type="reset" value="Reset" class="bottoni">
+            </form>
+            <center><a name="mainForm" href="#come_back">Come Back</a></center>
+         </div>
+         <div id="image">
+            <h2>IMAGE SELECTOR</h2>
+            <input type="button" class="info" value="i" onclick="appari2()"> <br>
+            <p class="ps" hidden name="i">This is the image selector. To select an image, drag it in the container and click Save. Click the buttons to change image. Click Delete for reset all.</p>
+            <div id="deposito" ondragover="stop(event)" ondrop="end(event)">
+               <p id="parole">Drag here your image</p>
+            </div>
+            <div id="images" draggable="true" ondragstart="start(event)">
+               <img src="img/foto1.jpg" id="avatar">
+            </div>
+            <input type="button" class="caso" value="Save" onclick="save()">
+            <input type="button" class="muovi" onclick="back()" value="Back">
+            <input type="button" class="muovi" onclick="next()" value="Next">
+            <a id="bella" name="image_selector" href="#come_back">Come Back</a>
+         </div>
+         <div id="map">
+            <h2>GEOLOCATION</h2>
+            <input type="button" id="buttonMap" value="find me" onclick="geo()">
+            <input type="button" class="info" value="i" onclick="appari3()"> <br>
+            <p class="ps" name="g" hidden>Now, for security, when you click the button, the page will check your geographic location and it will be show in the map.</p>
+            <div id="mymap">
+
+            </div>
+            <center><a name="geo" href="#come_back">Come Back</a></center>
+         </div>
+         <hr>
+         <div id="final">
+            <h2>FINAL STEP</h2>
+            <input type="button" class="info" value="i" onclick="appari4()"> <br>
+            <p class="ps" name="c" hidden>This is the final step of our adventure. Click twice here to create your document</p>
+            <div id="card">
+               <p id="cnumber"> YOUR CARD</p>
+               <img id="ff">
+               <div id="cmain">
+                  <h4>MAIN DATA</h4>
+                  <p id="cname">Name:</p>
+                  <p id="csurname">Surname:</p> <br>
+                  <p id="cdate">Day: </p>
+                  <p id="cmonth">Month: </p>
+                  <p id="cyear">Year: </p><br>
+                  <p id="cage">Age: </p>
+                  <p id="cgender">Gender: </p><br>
+                  <p id="cnation">Nazion: </p>
+                  <p id="cother" hidden>Other: </p><br>
+               </div><br>
+               <div id="cLocal">
+                  <h4>LOCATION</h4>
+
+               </div>
+               <div id="cBio">
+                  <h4>BIO</h4>
+
+               </div>
+            </div>
+            <input id="esegui" onclick="Run()" type="button" value="Run">
+            <input id="distruggi" onclick="distruggi()" type="button" value="Delete">
+            <center><a name="final" href="#come_back">Come Back</a></center>
+         </div>
+      </div>
+      <footer id="foot">
+         Powered by @666mandi
+         <br>
+         Check out my profile on gitHub for MORE
+      </footer>
+   </body>
+</html>
